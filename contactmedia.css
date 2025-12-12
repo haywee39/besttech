@@ -1,0 +1,51 @@
+/* Media Query for Small Screens (e.g., phones and small tablets) */
+@media only screen and (max-width: 767px) {
+  .footer_get_touch_outer {
+    margin-top: 40px;
+  }
+
+  .grid-70-30 {
+    grid-template-columns: 100%;
+  }
+
+  .colmun-70, .colmun-30 {
+    width: 100%;
+  }
+
+  .get_form_inner {
+    padding: 30px 20px;
+  }
+
+  .grid-50-50 {
+    grid-template-columns: 100%;
+    grid-gap: 15px;
+  }
+
+  .get_say_form {
+    padding: 30px 20px;
+    margin-top: 20px;
+  }
+
+  .get_say_social-icn {
+    position: static;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .get_say_info_sec > li {
+    grid-template-columns: 40px auto;
+    margin-bottom: 20px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    padding-left: 15px;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+  }
+}

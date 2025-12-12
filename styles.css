@@ -1,0 +1,412 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+/* HERO */
+.hero {
+    background: url('./homimg/a.jpg') center/cover no-repeat;
+    color: white;
+    height: 83vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.hero .btns {
+    background:#3450cd;
+    padding: 20px 30px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+    font-size: 1rem;
+    transition: transform 0.4s ease, background-color 0.4s ease;
+}
+.hero .btns:hover{
+    background-color:#00BFFF;
+    transform: translateY(-7px);
+    border: none;
+}
+.hero-content h1{
+  font-size: 55px;
+  font-weight: 600;
+}
+.hero-content h3{
+  font-size: 25px;
+  font-weight: 300;
+}
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+
+/* Intro Section */
+.intro-section {
+    width: 100vw;
+    padding: 4rem 2rem;
+    color: #3450cd;
+    background: linear-gradient(-45deg, #00BFFF, white, #3450cd);
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite;
+}
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.intro-content {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.intro-text-container {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    height: 100%;
+    gap: 1.5rem;
+    text-align: left;
+    /* background-color: red; */
+}
+.intro-container{
+  width: 40%;
+  height: 60%;
+  /* background-color: blue; */
+}
+
+.intro-container img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 8px;
+    
+}
+.cta-button {
+    display: flex;
+    width: 250px;
+    height: 70px;
+    align-items: center;
+    justify-content: center;
+    background:  #3450cd;
+    color: white;
+    letter-spacing: 2px;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: transform 0.4s ease, background-color 0.4s ease;
+}
+
+.cta-button:hover {
+    background-color:#00BFFF;
+    transform: translateY(-7px);
+    border: none;
+}
+/* ****************************** */
+/* Featured Products Section */
+.featured-products {
+  padding: 4rem 0;
+  background: #f9f9f9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #003366;
+  margin-bottom: 3rem;
+}
+
+/* Products Grid */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Product Card */
+.product-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.05);
+}
+
+.product-name {
+  padding: 1rem 1rem 0;
+  font-size: 1.25rem;
+  color: #003366;
+  text-align: center;
+}
+
+.product-specs {
+  padding: 0.5rem 1rem;
+  color: #666;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.product-button {
+  display: block;
+  text-align: center;
+  padding: 0.75rem;
+  background: #00BFFF;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+  border-radius: 0 0 8px 8px;
+}
+
+.product-button:hover {
+  background: #003366;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 767px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+/* GALLERY */
+.gallery {
+    padding: 40px 5%;
+}
+.machine-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 20px;
+}
+.machine img { width: 100%; border-radius: 8px; }
+
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+/* SERVICES */
+.services {
+  text-align: center;
+  color: #3450cd;
+    padding: 40px 5%;
+    background: linear-gradient(-45deg, #00BFFF, white, #3450cd);
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite;
+}
+.service-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.service-card {
+  color: #3450cd;
+    background: white;
+    padding: 20px;
+    flex: 1;
+    text-align: center;
+    border-radius: 8px;
+}
+.service-card i {
+    font-size: 2em;
+    color: #3450cd;
+    margin-bottom: 10px;
+}
+
+
+
+
+/* 666666666666666666666666666666666666666666666666666666 */
+/* TIMELINE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.timeline {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  width: 100vw;
+  background: linear-gradient(-45deg, #00BFFF, white, #3450cd);
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease infinite;
+  color: #3450cd;
+}
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+time{
+  color: #00BFFF; /*numbers*/
+}
+
+.timeline ol {
+  position: relative;
+  list-style: none;
+}
+
+.timeline ol::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: #00BFFF; /*vertical line*/
+}
+
+.timeline ol li .item-inner {
+  padding: 0px 180px;
+}
+
+.timeline ol li .time-wrapper {
+  position: relative;
+  font-size: 3rem; /* the numbers */
+  font-weight: bold;
+}
+
+.timeline ol li .time-wrapper::before,
+.timeline ol li .time-wrapper::after {
+  content: "";
+  position: absolute;
+  background: #00BFFF; /*the  horizontal line*/
+}
+
+.timeline ol li .time-wrapper::before {
+  top: 50%;
+  left: -180px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 3px;
+  transition: width 0.8s linear;
+}
+
+.timeline ol li .time-wrapper::after {
+  top: calc(50% - 8px);
+  left: -60px;
+  width: 15px;
+  height: 15px;/*the dot  */
+  border-radius: 50%;
+  transform: scale(0);
+  transform-origin: left center;
+  transition: all 0.4s linear;
+}
+
+.timeline ol li time,
+.timeline ol li .detail > * {
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.timeline ol li time {
+  display: inline-block;
+  transform: translateY(-30px);
+}
+
+.timeline ol li .detail > * {
+  transform: translateY(30px);
+}
+
+.timeline ol li .detail h3 {
+  font-size: 1.5rem;
+  margin: 15px 0;
+  color: #3450cd;
+  text-shadow: none;
+}
+/* ANIMATION STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.timeline ol li.in-view .time-wrapper::before {
+  width: 120px;
+}
+
+.timeline ol li.in-view .time-wrapper::after {
+  transition-delay: 0.8s;
+  transform: scale(1.5);
+}
+
+.timeline ol li.in-view time,
+.timeline ol li.in-view .detail > * {
+  opacity: 1;
+  transform: none;
+}
+
+.timeline ol li.in-view time {
+  transition-delay: 1.3s;
+}
+
+.timeline ol li.in-view .detail h3 {
+  transition-delay: 1.5s;
+}
+
+.timeline ol li.in-view .detail p {
+  transition-delay: 1.7s;
+}
+
+/* MQ STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media (max-width: 700px) {
+  .timeline{
+      margin: 0 auto;
+      max-width: 1000px;
+      padding: 50px 60px;      
+      text-align: center;
+  }
+  .timeline ol li .item-inner {
+    padding: 20px 40px;
+  }
+
+  .timeline ol li .time-wrapper::before {
+    display: none;
+  }
+
+  .timeline ol li .time-wrapper::after {
+    left: -45px;
+    transform-origin: center;
+  }
+
+  .timeline ol li.in-view .time-wrapper::after {
+    transition-delay: 0s;
+  }
+
+  .timeline ol li.in-view time {
+    transition-delay: 0.5s;
+  }
+
+  .timeline ol li.in-view .detail h3 {
+    transition-delay: 0.7s;
+  }
+
+}
+
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
