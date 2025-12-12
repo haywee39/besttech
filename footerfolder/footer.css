@@ -1,6 +1,5 @@
 
 .footer-distributed{
-    /* background: linear-gradient(100deg, #00BFFF 0%, #3450cd 74%); */
 	background-color: rgb(90, 87, 87);
 	box-sizing: border-box;
 	width: 100%;
@@ -27,7 +26,6 @@
 /* The company logo */
 
 .footer-distributed h3{
-	/* font-family: montserrat; */
 	color:  #ffffff;
 	margin: 0;
     justify-self: left;
