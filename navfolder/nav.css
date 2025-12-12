@@ -1,14 +1,20 @@
 
 /* Navbar */
 .navbar {
+  position: fixed !important;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 19vh;
-  background: rgba(0, 0, 0, 0.2);
+  width: 100vw;
+  background-color: rgb(90, 87, 87);
+  /* background: white; */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
   position: relative;
   z-index: 1000;
+  top: 0; /* Position it at the top */
+  left: 0; /* Align it to the left edge */
+
 
 }
 
@@ -18,14 +24,18 @@
 }
 
 /* Logo */
-.logo a {
+.logo {
   text-decoration: none;
+  margin: 2rem;
+  width: 90px;
+  height: 90px;
 }
 .logo a img{
-    padding-top: 20px;
     margin-right: 2rem;
-    width: 150px;
-    height: 150px;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    
 }
 
 /* Nav Menu */
@@ -37,7 +47,8 @@
 
 .nav-menu a {
   text-decoration: none;
-  color: #3450cd;
+  /* color: #3450cd; */
+  color: white;
   font-weight: lighter;
   font-size: 18px;
   transition: color 0.3s ease;
@@ -183,7 +194,8 @@
     left: -100%;
     width: 80%;
     height: 100vh;
-    background: #3450cd;
+    /* background: #3450cd; */
+    background-color: rgb(90, 87, 87);
     flex-direction: column;
     align-items: center;
     justify-content: center;
