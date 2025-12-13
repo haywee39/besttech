@@ -1,0 +1,278 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+
+
+
+/* &&&&&&&&&&&&&&&&&&&&&&&&& */
+.scroll-to-top {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    width: 50px;
+    height: 50px;
+    background-color: #00BFFF;
+    /* background-color: rgb(90, 87, 87); */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+}
+
+.scroll-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.scroll-to-top:hover {
+    background-color: #3450cd;
+    transform: translateY(-3px);
+}
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+
+
+
+/* ------ */
+/* MACHINE SECTION CATEGORY  */
+/* Machines Categories Navigation */
+.menu-categories-nav {
+  margin-top: 22vh;
+    width: 100vw;
+    text-align: center;
+}
+
+.the-section-title {
+    font-size: 2.5rem;
+    color: #3450cd;
+    text-shadow: white 1px 1px 1px;
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    /* font-weight: 500; */
+    color: #3450cd;
+    margin-bottom: 2rem;
+}
+
+.categories-container {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    width: 300px;
+    height: 300px;
+    background: #3450cd;
+    padding: 1rem;
+}
+
+.category-item:hover {
+    transform: scale(1.1);
+}
+
+.category-icon {
+    width: 100%;
+    height: 100%;
+    
+    /* border-radius: 50%; */
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.category-item:hover .category-icon {
+    transform: scale(1.05);
+}
+
+.category-name {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: white;
+}
+/* Basic Styling for Menu Section */
+.menu-section {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    gap: 1rem;
+    padding: 50px 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient(at 9.2% 73.7%, #ffddc9 0px, transparent 50%),
+    radial-gradient(at 92.3% 7.6%, #fff9cf 0px, transparent 50%);
+    background-repeat: repeat;
+  }
+
+  .menu-section h1{
+    text-shadow: 2px 2px 2px rgb(255, 165, 0);
+  }
+  .menu-section h2{
+    color: #3450cd;
+    text-shadow: 1px 1px 1px rgb(255, 165, 0);
+    background-color: white;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+  
+  /* Menu Card Styles */
+  .menu-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .menu-card {
+    width: 250px;
+    height: 300px;
+    perspective: 1000px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: rgb(50, 26, 5) 5px;
+    transition: transform 0.6s ease;
+  }
+  
+  .menu-card-front,
+  .menu-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    box-shadow: 0 4px 10px rgb(50, 26, 5, 0.2);
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .menu-card-front::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    opacity: 0.2;
+    pointer-events:none
+  }
+  
+  .menu-card-front {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    transform: rotateY(0);
+  }
+  
+  .menu-card-front img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .menu-card-front h2 {
+    color: #3450cd;
+    text-shadow: 1px 1px 1px rgb(255, 165, 0);
+    margin: 10px 0;
+  }
+
+
+  .details-btn {
+    margin-top: auto;
+    padding: 8px 15px;
+    font-size: 1em;
+    background: rgb(50, 26, 5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .details-btn:hover {
+    background: rgb(50, 26, 5, 0.3);
+  }
+  
+  .menu-card-back {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 15px;
+    transform: rotateY(180deg);
+  }
+
+  .menu-card-back::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center center;
+    opacity: 0.3;
+    pointer-events:none
+  }
+
+  .menu-card-back i{
+    font-size: 1.5rem;
+  }
+  
+  
+  .back-btn {
+    padding: 8px 15px;
+    font-size: 1rem;
+    background: rgb(50, 26, 5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .back-btn:hover {
+    background: rgb(50, 26, 5, 0.2);
+  }
+  
+  /* Flip Effect */
+  .menu-card.flip .menu-card-front {
+    transform: rotateY(180deg);
+  }
+  
+  .menu-card.flip .menu-card-back {
+    transform: rotateY(0);
+  }
+
