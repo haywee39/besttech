@@ -135,3 +135,26 @@ ul {
 .get_say_info_sec > li a:hover {
   background-color: #00BFFF;
 }
+
+
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+/* Maps Section */
+.maps-section {
+  padding: 60px 0;
+  background: #f9f9f9;
+}
+
+.maps-section h2 {
+  color: #003366;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.map-container {
+  width: 100%;
+  height: 450px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
