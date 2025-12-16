@@ -18,7 +18,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-    /* background-color:0 8px 16px rgba(91, 64, 230, 0.8) ; */
     background-color: #3450cd;
     z-index: 2000;
     justify-content: center;
@@ -121,8 +120,7 @@
     left: 2rem;
     width: 50px;
     height: 50px;
-    background-color: #00BFFF;
-    /* background-color: rgb(90, 87, 87); */
+    background-color: red;
     color: white;
     border-radius: 50%;
     display: flex;
@@ -157,7 +155,7 @@
 /* MACHINE SECTION CATEGORY  */
 /* Machines Categories Navigation */
 .menu-categories-nav {
-  margin-top: 22vh;
+    margin-top: 22vh;
     width: 100vw;
     text-align: center;
 }
@@ -217,7 +215,6 @@
 
 .category-name {
     font-size: 1rem;
-    font-weight: bolder;
     color: white;
 }
 /* Basic Styling for Menu Section */
@@ -230,14 +227,20 @@
     text-align: center;
     justify-content: center;
     align-items: center;
-    background-image: radial-gradient(at 9.2% 73.7%, #ffddc9 0px, transparent 50%),
-    radial-gradient(at 92.3% 7.6%, #fff9cf 0px, transparent 50%);
-    background-repeat: repeat;
-  }
+    background: linear-gradient(-45deg, #00BFFF, white, #3450cd);
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite;
+}
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
 
   .menu-section h1{
+    padding-top: 3.5rem;
     color: #3450cd;
-    text-shadow:0 10px 10px rgba(0, 0, 0);
+    text-shadow:0 4px 2px white;
   }
   .menu-section h2{
     color: #3450cd;
@@ -261,7 +264,7 @@
     perspective: 1000px;
     position: relative;
     border-radius: 10px;
-    box-shadow: rgb(50, 26, 5) 5px;
+    box-shadow: 0 4px 10px rgb(50, 26, 5, 0.2);
     transition: transform 0.6s ease;
   }
   
@@ -308,7 +311,7 @@
   
   .menu-card-front h2 {
     color: #3450cd;
-    font-size: 17px;
+    font-size: 15px;
     margin: 10px 0;
   }
 
@@ -350,16 +353,18 @@
     opacity: 0.3;
     pointer-events:none
   }
-
+  .menu-card-back h2{
+      font-size: .7rem;
+    }
   .menu-card-back i{
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   
   
   .back-btn {
     padding: 8px 15px;
     font-size: 1rem;
-    background: rgb(50, 26, 5);
+    background: #3450cd;
     color: white;
     border: none;
     cursor: pointer;
@@ -367,7 +372,7 @@
   }
   
   .back-btn:hover {
-    background: rgb(50, 26, 5, 0.2);
+    background: #00BFFF;
   }
   
   /* Flip Effect */
