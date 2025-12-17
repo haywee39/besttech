@@ -233,7 +233,7 @@
     text-align: center;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(-45deg, red, #00BFFF, white, #3450cd);
+    background: linear-gradient(-45deg, #00BFFF, white, #3450cd);
     background-size: 400% 400%;
     animation: gradientShift 8s ease infinite;
 }
@@ -267,6 +267,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    padding: 20px;
   }
   
   .menu-card {
@@ -395,4 +396,22 @@
   .menu-card.flip .menu-card-back {
     transform: rotateY(0);
   }
+/* &&&&&&&&&&&&&&&&&&&&&&&&&& */
 
+
+/* 
+@media (max-width: 600px) {
+  .menu-cards {
+    justify-content: space-between;
+  }
+
+  .menu-card {
+    width: calc(50% - 10px);  2 cards per row 
+    height: 200px;  keep your height 
+  }
+}
+@media (max-width: 380px) {
+  .menu-card {
+    width: 100%;
+  }
+} */
