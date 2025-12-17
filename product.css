@@ -225,15 +225,16 @@
     display: flex;
     flex-direction: column;
     width: 100vw;
-    padding: 0;
+    padding: 1rem;
     margin: 0;
     height: auto;
-    /* gap: 1rem; */
+    gap: 1rem;
     /* padding: 50px 10px; */
     text-align: center;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(-45deg, #00BFFF, white, #3450cd);
+    background-color: red;
+    /* background: linear-gradient(-45deg, #00BFFF, white, #3450cd); */
     background-size: 400% 400%;
     animation: gradientShift 8s ease infinite;
 }
