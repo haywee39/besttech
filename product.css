@@ -263,13 +263,23 @@
   }
   
   /* Menu Card Styles */
-  .menu-cards {
+  /* .menu-cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     padding: 20px;
-  }
+  } */
+
+  .menu-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 900px; /* keeps layout neat on large screens */
+  padding: 20px;
+}
+
   
   .menu-card {
     width: 200px;
@@ -400,19 +410,18 @@
 /* &&&&&&&&&&&&&&&&&&&&&&&&&& */
 
 
-/* 
 @media (max-width: 600px) {
   .menu-cards {
-    justify-content: space-between;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .menu-card {
-    width: calc(50% - 10px);  2 cards per row 
-    height: 200px;  keep your height 
+    width: 100%;
   }
 }
 @media (max-width: 380px) {
-  .menu-card {
-    width: 100%;
+  .menu-cards {
+    grid-template-columns: 1fr;
   }
-} */
+}
+
