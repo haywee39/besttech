@@ -157,18 +157,20 @@
 .menu-categories-nav {
     margin-top: 22vh;
     width: 100vw;
+    height: auto;
+    padding: 1rem;
     text-align: center;
 }
 
 .the-section-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #3450cd;
     text-shadow: white 1px 1px 1px;
     margin-bottom: 0.5rem;
 }
 
 .section-subtitle {
-    font-size: 18px;
+    font-size: 15px;
     color: #3450cd;
     margin-bottom: 2.5rem;
 }
@@ -180,6 +182,7 @@
     justify-content: center;
     gap: 1.5rem;
     max-width: 1200px;
+    width: 100vw;
     margin: 0 auto;
 }
 
@@ -189,7 +192,7 @@
     align-items: center;
     cursor: pointer;
     transition: transform 0.3s ease;
-    width: 190px;
+    width: 185px;
     height: 190px;
     background: #3450cd;
     padding: .5rem;
@@ -200,8 +203,8 @@
 }
 
 .category-icon {
-    width: 100%;
-    height: 100%;    
+    width: 95%;
+    height: 90%;    
     border-radius: 5%;
     object-fit: cover;
     margin-bottom: 0.5rem;
@@ -214,20 +217,23 @@
 }
 
 .category-name {
-    font-size: 1rem;
+    font-size: .8rem;
     color: white;
 }
 /* Basic Styling for Menu Section */
 .menu-section {
     display: flex;
     flex-direction: column;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
     height: auto;
-    gap: 1rem;
-    padding: 50px 10px;
+    /* gap: 1rem; */
+    /* padding: 50px 10px; */
     text-align: center;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(-45deg, #00BFFF, white, #3450cd);
+    background: linear-gradient(-45deg, red, #00BFFF, white, #3450cd);
     background-size: 400% 400%;
     animation: gradientShift 8s ease infinite;
 }
