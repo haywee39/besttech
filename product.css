@@ -233,8 +233,8 @@
     text-align: center;
     justify-content: center;
     align-items: center;
-    background-color: red;
-    /* background: linear-gradient(-45deg, #00BFFF, white, #3450cd); */
+    /* background-color: red; */
+    background: linear-gradient(-45deg, #00BFFF, white, #3450cd);
     background-size: 400% 400%;
     animation: gradientShift 8s ease infinite;
 }
@@ -410,7 +410,7 @@
 /* &&&&&&&&&&&&&&&&&&&&&&&&&& */
 
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .menu-cards {
     grid-template-columns: repeat(2, 1fr);
   }
