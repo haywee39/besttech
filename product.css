@@ -4,7 +4,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
-  /* overflow-x: hidden; */
 }
 
 /* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
@@ -156,56 +155,59 @@
 /* MACHINE SECTION CATEGORY  */
 /* Machines Categories Navigation */
 .menu-categories-nav {
-  /* display: flex; */
+  margin-top: 22vh;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-    margin-top: 22vh;
     width: 100vw;
     height: auto;
-    padding: 1rem;
+    /* padding: 2rem 1rem; */
     text-align: center;
-    /* background-color: red; */
-    /* overflow-x: hidden; */
+    background-color: red;
+    overflow: hidden;
 }
 
 .the-section-title {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     color: #3450cd;
     text-shadow: white 1px 1px 1px;
     margin-bottom: 0.5rem;
+    /* overflow: hidden; */
 }
 
 .section-subtitle {
-    font-size: 15px;
+    font-size: 18px;
     color: #3450cd;
     margin-bottom: 2.5rem;
 }
 
 .categories-container {
+    padding: 2rem;
+    margin: 1rem;
     display: flex;
     flex-wrap: wrap;
-    height: auto;
-    justify-content: center;
+    height: auto;   
+    width: 100%;
+    justify-content: space-around;
     align-items: center;
     gap: 1.5rem;
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-    overflow-x: hidden;
+    /* max-width: 1200px; */
+    /* margin: 0 auto; */
+    /* overflow-y: hidden; */
+    background-color: orange;
 }
  
-
-
 .category-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     cursor: pointer;
     transition: transform 0.3s ease;
-    width: 190px;
-    height: 200px;
-    /* background: #3450cd; */
-    padding: .5rem;
+    width: 200px;
+    height: 210px;
+    background: #3450cd;
+    /* padding: .5rem; */
 }
 
 .category-item:hover {
@@ -235,20 +237,16 @@
 /* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
 /* Basic Styling for Menu Section */
 .menu-section {
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    padding: 1rem;
-    margin: 0;
-    height: auto;
-    gap: 1rem;
-    padding: 50px 10px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+        width: 100vw;
+        height: auto;
     background: linear-gradient(-45deg, #00BFFF, white, #3450cd);
     background-size: 400% 400%;
     animation: gradientShift 8s ease infinite;
+   
 }
 @keyframes gradientShift {
   0% { background-position: 0% 50%; }
@@ -273,42 +271,31 @@
     border-radius: 5px;
   }
   
-  /* Menu Card Styles */
-  /* .menu-cards {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-  } */
-
-
   .menu-cards {
-  /* display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
-  gap: 20px;
-  width: 100%;
-  max-width: 900px; /* keeps layout neat on large screens 
-  padding: 20px; */
-   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 1rem;
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 1rem;
-  box-sizing: border-box;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;   
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: orangered;
 }
 
  
   .menu-card {
-    width: 100%;
-    /* width: 200px; */
-    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
     perspective: 1000px;
-    position: relative;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgb(50, 26, 5, 0.2);
-    transition: transform 0.6s ease;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    width: 220px;
+    height: 220px;
+    background: #3450cd;
+     transition: transform 0.6s ease;
   }
   
   .menu-card-front,
@@ -341,7 +328,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    padding: 8px;
     transform: rotateY(0);
   }
   
@@ -362,7 +349,7 @@
   .details-btn {
     margin-top: auto;
     padding: 5px 10px;
-    font-size: 1em;
+    font-size: 1rem;
     background: #3450cd;
     font-size: .8rem;
     color: white;
@@ -380,7 +367,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    padding: 10px;
+    padding: 8px;
     transform: rotateY(180deg);
   }
 
@@ -432,7 +419,7 @@
 
 
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .menu-cards {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -445,9 +432,9 @@
   .menu-cards {
     grid-template-columns: 1fr;
   }
-}
+} */
 /* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .categories-container {
     justify-content: center;
        grid-template-columns: repeat(2, 1fr);
@@ -467,10 +454,10 @@
   .category-item {
     width: 100%;
   }
-}
+} */
 
 /* fixing for redmi 14c */
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .categories-container {
     justify-content: center;
   }
@@ -489,6 +476,6 @@
   .menu-cards {
     grid-template-columns: 1fr;
   }
-}
+} */
 
 
