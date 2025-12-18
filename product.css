@@ -164,7 +164,7 @@
     height: auto;
     /* padding: 2rem 1rem; */
     text-align: center;
-    background-color: red;
+    /* background-color: red; */
     overflow: hidden;
 }
 
@@ -195,7 +195,7 @@
     /* max-width: 1200px; */
     /* margin: 0 auto; */
     /* overflow-y: hidden; */
-    background-color: orange;
+    /* background-color: orange; */
 }
  
 .category-item {
@@ -415,67 +415,5 @@
     transform: rotateY(0);
   }
 /* &&&&&&&&&&&&&&&&&&&&&&&&&& */
-
-
-
-
-/* @media (max-width: 768px) {
-  .menu-cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .menu-card {
-    width: 100%;
-  }
-}
-@media (max-width: 380px) {
-  .menu-cards {
-    grid-template-columns: 1fr;
-  }
-} */
-/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
-/* @media (max-width: 768px) {
-  .categories-container {
-    justify-content: center;
-       grid-template-columns: repeat(2, 1fr);
-  }
-
-  .category-item {
-    width: calc(50% - 0.75rem);  2 items per row 
-    height: auto;
-  }
-
-  .category-icon {
-    height: 140px;
-  }
-}
-
-@media (max-width: 380px) {
-  .category-item {
-    width: 100%;
-  }
-} */
-
-/* fixing for redmi 14c */
-/* @media (max-width: 600px) {
-  .categories-container {
-    justify-content: center;
-  }
-
-  .category-item {
-    flex: 0 0 calc(50% - 0.75rem);
-    max-width: calc(50% - 0.75rem);
-  }
-}
-@media (max-width: 600px) {
-  .menu-cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 380px) {
-  .menu-cards {
-    grid-template-columns: 1fr;
-  }
-} */
 
 
