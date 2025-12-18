@@ -461,14 +461,14 @@
   }
 }
 
-
+/* fixing for redmi 14c */
 @media (max-width: 600px) {
-  .categories-container {
+  .categories-container, .menu-cards  {
     justify-content: center;
   }
 
-  .category-item {
-    flex: 0 0 calc(50% - 1rem);
-    max-width: calc(50% - 1rem);
+  .category-item, .menu-card {
+    flex: 0 0 calc(50% - 0.75rem);
+    max-width: calc(50% - 0.75rem);
   }
 }
