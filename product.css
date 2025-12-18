@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
+  /* overflow-x: hidden; */
 }
 
 /* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
@@ -160,6 +161,8 @@
     height: auto;
     padding: 1rem;
     text-align: center;
+    /* background-color: red; */
+    overflow-x: hidden;
 }
 
 .the-section-title {
@@ -194,7 +197,7 @@
     transition: transform 0.3s ease;
     width: 185px;
     height: 190px;
-    background: #3450cd;
+    /* background: #3450cd; */
     padding: .5rem;
 }
 
@@ -220,17 +223,19 @@
     font-size: .8rem;
     color: white;
 }
+
+
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
 /* Basic Styling for Menu Section */
 .menu-section {
     display: flex;
     flex-direction: column;
     width: 100vw;
     padding: 1rem;
-    /* flex-wrap: wrap; */
     margin: 0;
     height: auto;
     gap: 1rem;
-    /* padding: 50px 10px; */
+    padding: 50px 10px;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -262,16 +267,28 @@
   }
   
   /* Menu Card Styles */
-  .menu-cards {
+  /* .menu-cards {
     display: flex;
     justify-content: center;
     gap: 20px;
     padding: 20px;
-  }
+  } */
+
+
+  .menu-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 900px; /* keeps layout neat on large screens */
+  padding: 20px;
+}
+
  
   .menu-card {
     width: 200px;
     height: 200px;
+    /* flex-wrap: wrap; */
     perspective: 1000px;
     position: relative;
     border-radius: 10px;
@@ -398,6 +415,8 @@
 /* &&&&&&&&&&&&&&&&&&&&&&&&&& */
 
 
+
+
 @media (max-width: 768px) {
   .menu-cards {
     grid-template-columns: repeat(2, 1fr);
@@ -412,4 +431,25 @@
     grid-template-columns: 1fr;
   }
 }
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+@media (max-width: 768px) {
+  .categories-container {
+    /* justify-content: center; */
+       /* grid-template-columns: repeat(2, 1fr); */
+  }
 
+  .category-item {
+    width: calc(50% - 0.75rem); /* 2 items per row */
+    height: auto;
+  }
+
+  .category-icon {
+    height: 140px;
+  }
+}
+
+@media (max-width: 380px) {
+  .category-item {
+    width: 100%;
+  }
+}
