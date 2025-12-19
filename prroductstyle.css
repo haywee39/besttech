@@ -1,0 +1,300 @@
+/* 🔹 GENERAL RESET (important for consistency) */
+* {
+  box-sizing: border-box;
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+
+    /* Allergy Modal Styles */  
+  /* ALLERGY POP UP  */
+  /* Allergy Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #3450cd;
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: #000;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 5px 15px rgba(222, 219, 219, 0.6);
+    animation: modalFadeIn 0.3s ease;
+    position: relative;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.modal-header h2 {
+    color: red;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.modal-header i {
+    margin-right: 0.5rem;
+    background-color: white;
+}
+
+.close-modal {
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #3450cd;
+}
+
+.close-modal:hover {
+    color:#00BFFF;
+}
+
+.modal-body {
+    margin-bottom: 1.5rem;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.modal-body p{
+    margin-bottom: 1rem;
+    color: white;
+}
+.modal-body strong{
+  color: rgb(255, 165, 0);
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal-close-btn {
+    background-color: #3450cd;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-close-btn:hover {
+    background-color: #00BFFF;
+}
+
+@keyframes modalFadeIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+
+
+
+/* &&&&&&&&&&&&&&&&&&&&&&&&& */
+.scroll-to-top {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    cursor: pointer;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+}
+
+.scroll-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.scroll-to-top:hover {
+    background-color: #3450cd;
+    transform: translateY(-3px);
+}
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+
+/* 🔹 CATEGORY NAV SECTION (TOP ICON NAV) */
+.menu-categories-nav {
+  padding: 40px 20px;
+  text-align: center;
+  color: #3450cd;
+}
+
+.the-section-title {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 15px;
+  opacity: 0.85;
+  margin-bottom: 30px;
+}
+
+.categories-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.category-item {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.category-item:hover {
+  transform: translateY(-3px);
+}
+
+.category-icon {
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+  margin: 0 auto 10px;
+}
+
+.category-name {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* 🔹 MENU SECTION (EACH CATEGORY) */
+.menu-section {
+  padding: 50px 20px;
+  color: #3450cd;
+}
+
+.menu-section h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.menu-section p {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* 🔹 CARD CONTAINER (THIS FIXES REDMI + LAPTOP) */
+.menu-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px;
+}
+
+/* 🔹 MENU CARD (BASE – MOBILE FIRST) */
+.menu-card {
+  flex: 0 0 calc(50% - 10px); /* ✅ 2 per row on Redmi */
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  perspective: 1000px;
+}
+
+/* 🔹 CARD FACES (FRONT & BACK) */
+.menu-card-front,
+.menu-card-back {
+  padding: 15px;
+  text-align: center;
+  backface-visibility: hidden;
+  background-color: red;
+}
+
+.menu-card-front img {
+  height: 160px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  background-color: yellow;
+}
+
+.menu-card-front h2, .menu-card-back h2 {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+/* 🔹 BUTTONS */
+.details-btn,
+.back-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #2d3cff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn.call,
+.btn.wa {
+  margin: 5px;
+  display: inline-block;
+}
+
+/* 📱 TABLET BREAKPOINT */
+@media (min-width: 768px) {
+
+  .categories-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .menu-card {
+    flex: 0 0 calc(33.333% - 14px); /* 3 per row */
+  }
+}
+
+/* 💻 LAPTOP / DESKTOP BREAKPOINT (NO MORE CHOKING) */
+@media (min-width: 1024px) {
+
+  .menu-cards {
+    padding: 20px 40px;
+    gap: 24px;
+  }
+
+  .menu-card {
+    flex: 0 0 calc(25% - 18px); /* 4 per row with breathing room */
+  }
+}
+
+

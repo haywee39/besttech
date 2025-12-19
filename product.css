@@ -5,6 +5,12 @@
   box-sizing: border-box;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 
 /* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
 
@@ -189,7 +195,7 @@
     flex-wrap: wrap;
     height: auto;   
     width: 100%;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     gap: 1.5rem;
     /* max-width: 1200px; */
@@ -204,9 +210,9 @@
     align-items: center;
     cursor: pointer;
     transition: transform 0.3s ease;
-    width: 200px;
-    height: 210px;
-    background: #3450cd;
+    width: 220px;
+    height: 250px;
+    background: yellowgreen;
     /* padding: .5rem; */
 }
 
@@ -215,8 +221,9 @@
 }
 
 .category-icon {
+    padding: 5px;
     width: 95%;
-    height: 90%;    
+    height: 80%;    
     border-radius: 5%;
     object-fit: cover;
     margin-bottom: 0.5rem;
@@ -229,7 +236,7 @@
 }
 
 .category-name {
-    font-size: .8rem;
+    font-size: 1rem;
     color: #3450cd;
 }
 
@@ -241,12 +248,12 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-        width: 100vw;
-        height: auto;
-    background: linear-gradient(-45deg, #00BFFF, white, #3450cd);
-    background-size: 400% 400%;
-    animation: gradientShift 8s ease infinite;
-   
+      width: 100vw;
+      height: auto;
+      background: linear-gradient(-45deg, #00BFFF, white, #3450cd);
+      background-size: 400% 400%;
+      animation: gradientShift 8s ease infinite;
+    
 }
 @keyframes gradientShift {
   0% { background-position: 0% 50%; }
@@ -271,7 +278,7 @@
     border-radius: 5px;
   }
   
-  .menu-cards {
+  /* .menu-cards {
     padding: 2rem;
     display: flex;
     flex-wrap: wrap;
@@ -281,7 +288,13 @@
     align-items: center;
     gap: 1.5rem;
     background-color: orangered;
+} */
+.menu-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
 }
+
 
  
   .menu-card {
@@ -416,4 +429,19 @@
   }
 /* &&&&&&&&&&&&&&&&&&&&&&&&&& */
 
+
+@media (min-width: 768px) {
+  .menu-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .menu-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+}
 

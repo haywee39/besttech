@@ -1,13 +1,77 @@
 // JavaScript to handle card flip on "See Details" and "Back" button clicks
-function flipCard(event) {
-    const card = event.target.closest('.menu-card');
-    card.classList.add('flip');
-  }
+// function flipCard(event) {
+//     const card = event.target.closest('.menu-card');
+//     card.classList.add('flip');
+//   }
   
-  function flipBack(event) {
-    const card = event.target.closest('.menu-card');
-    card.classList.remove('flip');
-  }
+//   function flipBack(event) {
+//     const card = event.target.closest('.menu-card');
+//     card.classList.remove('flip');
+//   }
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  document.querySelectorAll(".menu-card").forEach(card => {
+    const front = card.querySelector(".menu-card-front");
+    const back = card.querySelector(".menu-card-back");
+    const detailsBtn = card.querySelector(".details-btn");
+    const backBtn = card.querySelector(".back-btn");
+
+    if (!front || !back) return;
+
+    // Initial state
+    back.style.display = "none";
+    back.style.opacity = "0";
+    back.style.transform = "translateX(20px)";
+
+    front.style.opacity = "1";
+    front.style.transform = "translateX(0)";
+
+    // Shared animation styles
+    [front, back].forEach(face => {
+      face.style.transition = "opacity 0.35s ease, transform 0.35s ease";
+    });
+
+    // Show back
+    if (detailsBtn) {
+      detailsBtn.addEventListener("click", () => {
+        front.style.opacity = "0";
+        front.style.transform = "translateX(-20px)";
+
+        setTimeout(() => {
+          front.style.display = "none";
+          back.style.display = "block";
+
+          requestAnimationFrame(() => {
+            back.style.opacity = "1";
+            back.style.transform = "translateX(0)";
+          });
+        }, 200);
+      });
+    }
+
+    // Return to front
+    if (backBtn) {
+      backBtn.addEventListener("click", () => {
+        back.style.opacity = "0";
+        back.style.transform = "translateX(20px)";
+
+        setTimeout(() => {
+          back.style.display = "none";
+          front.style.display = "block";
+
+          requestAnimationFrame(() => {
+            front.style.opacity = "1";
+            front.style.transform = "translateX(0)";
+          });
+        }, 200);
+      });
+    }
+
+  });
+
+});
+
 
 
 // javascript that will scrill to menu category selected by user 
@@ -28,7 +92,6 @@ function flipCard(event) {
         });
     });
 });
-
 
 
 // javascript to scroll to top of page 
