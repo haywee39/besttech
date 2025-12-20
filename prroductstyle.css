@@ -226,35 +226,31 @@ img {
   margin-bottom: 25px;
 }
 
-/* .menu-card
-.menu-card-front
-.menu-card img */
+.menu-cards {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 10px;
+  /* padding: 12px; */
+  width: 100%;
+  box-sizing: border-box;
+}
 
-/* 🔹 CARD CONTAINER (THIS FIXES REDMI + LAPTOP) */
-/* .menu-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  padding: 10px;
-} */
-
-/* 🔹 MENU CARD (BASE – MOBILE FIRST) */
-/* .menu-card {
-  flex: 0 0 calc(50% -6px); /* ✅ 2 per row on Redmi 
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  position: relative;
-  perspective: 1000px;
-} */
+/* FORCE cards to obey grid */
+.menu-card {
+  
+  width: auto !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  box-sizing: border-box;
+  /* background: #00BFFF; */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
 
 /* 🔹 CARD FACES (FRONT & BACK) */
 .menu-card-front,
 .menu-card-back {
-  /* padding: 15px; */
   text-align: center;
   backface-visibility: hidden;
-  /* background-color: orange; */
 }
 
 .menu-card-front img {
@@ -262,8 +258,8 @@ img {
   width: auto;
   object-fit: cover;
   margin-bottom: 10px;
-  background-color: yellow;
-  padding: 0 !important;
+  background-color: rgb(250, 234, 234);
+  padding: 10px !important;
   margin: 0 !important;
 }
 
@@ -289,97 +285,28 @@ img {
   display: inline-block;
 }
 
-/* 📱 TABLET BREAKPOINT */
-/* @media (min-width: 768px) {
-
-  .categories-container {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-   .menu-cards {
-    padding: 20px;
-    gap: 18px;
-  }
-
-  .menu-card {
-    flex: 0 0 calc(33.333% - 12px);
-  }
-} */
-
-/* 💻 LAPTOP / DESKTOP BREAKPOINT (NO MORE CHOKING) */
-/* @media (min-width: 1024px) {
-
-  .menu-cards {
-    padding: 30px 40px;
-    gap: 24px;
-  } */
-
-  /* .menu-card {
-    flex: 0 0 calc(25% - 18px); /* 4 per row with breathing room 
-  } 
-}
-
-/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
-/* =========================
-   CARD GRID – MOBILE FIRST
-   ========================= */
-
-/* =========================
-   FORCE CARD GRID (FINAL)
-   ========================= */
-
-.menu-cards {
-  display: grid !important;
-  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  gap: 10px;
-  /* padding: 12px; */
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* FORCE cards to obey grid */
-.menu-card {
-  width: auto !important;
-  max-width: none !important;
-  min-width: 0 !important;
-  box-sizing: border-box;
-}
-
-/* =========================
-   TABLET
-   ========================= */
-/* @media (min-width: 768px) {
-  .menu-cards {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-    padding: 20px;
-  }
-} */
 
 /* =========================
    DESKTOP
    ========================= */
 @media (min-width: 1024px) {
   .menu-cards {
-    /* grid-template-columns: repeat(4, 1fr); */
     grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
     gap: 20px;
     padding: 30px 15px;
   }
   .menu-card-front,
-.menu-card-back {
+  .menu-card-back {
   padding: 10px;
   text-align: center;
   backface-visibility: hidden;
-  /* background-color: orange; */
 }
 
-.categories-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-  width: 100% !important;
+.menu-card-front img {
+  height: 220px;
+  width: 100%;
 }
+
 }
 
 
