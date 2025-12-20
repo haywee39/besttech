@@ -208,8 +208,9 @@ img {
 
 /* 🔹 MENU SECTION (EACH CATEGORY) */
 .menu-section {
-  padding: 50px 20px;
+  padding: 50px 6px;
   color: #3450cd;
+  background-color: red;
 }
 
 .menu-section h1 {
@@ -219,26 +220,30 @@ img {
 
 .menu-section p {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
+/* .menu-card
+.menu-card-front
+.menu-card img */
+
 /* 🔹 CARD CONTAINER (THIS FIXES REDMI + LAPTOP) */
-.menu-cards {
+/* .menu-cards {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
   padding: 10px;
-}
+} */
 
 /* 🔹 MENU CARD (BASE – MOBILE FIRST) */
-.menu-card {
-  flex: 0 0 calc(50% -6px); /* ✅ 2 per row on Redmi */
+/* .menu-card {
+  flex: 0 0 calc(50% -6px); /* ✅ 2 per row on Redmi 
   background: #fff;
   border-radius: 12px;
   overflow: hidden;
   position: relative;
   perspective: 1000px;
-}
+} */
 
 /* 🔹 CARD FACES (FRONT & BACK) */
 .menu-card-front,
@@ -279,7 +284,7 @@ img {
 }
 
 /* 📱 TABLET BREAKPOINT */
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
 
   .categories-container {
     grid-template-columns: repeat(4, 1fr);
@@ -293,18 +298,67 @@ img {
   .menu-card {
     flex: 0 0 calc(33.333% - 12px);
   }
-}
+} */
 
 /* 💻 LAPTOP / DESKTOP BREAKPOINT (NO MORE CHOKING) */
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
 
   .menu-cards {
     padding: 30px 40px;
     gap: 24px;
-  }
+  } */
 
-  .menu-card {
-    flex: 0 0 calc(25% - 18px); /* 4 per row with breathing room */
+  /* .menu-card {
+    flex: 0 0 calc(25% - 18px); /* 4 per row with breathing room 
+  } 
+}
+
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+/* =========================
+   CARD GRID – MOBILE FIRST
+   ========================= */
+
+/* =========================
+   FORCE CARD GRID (FINAL)
+   ========================= */
+
+.menu-cards {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 14px;
+  padding: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* FORCE cards to obey grid */
+.menu-card {
+  width: auto !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  box-sizing: border-box;
+}
+
+/* =========================
+   TABLET
+   ========================= */
+/* @media (min-width: 768px) {
+  .menu-cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    padding: 20px;
+  }
+} */
+
+/* =========================
+   DESKTOP
+   ========================= */
+@media (min-width: 1024px) {
+  .menu-cards {
+    /* grid-template-columns: repeat(4, 1fr); */
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 20px;
+    padding: 30px 15px;
   }
 }
 
