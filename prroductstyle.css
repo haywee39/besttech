@@ -159,10 +159,12 @@ img {
 /* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
 
 /* 🔹 CATEGORY NAV SECTION (TOP ICON NAV) */
+ /*  */
 .menu-categories-nav {
   padding: 40px 20px;
   text-align: center;
   color: #3450cd;
+  background-color: #00BFFF;
 }
 
 .the-section-title {
@@ -180,6 +182,7 @@ img {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
+  width: 100% !important;
 }
 
 .category-item {
@@ -210,7 +213,7 @@ img {
 .menu-section {
   padding: 50px 6px;
   color: #3450cd;
-  background-color: red;
+  /* background-color: red; */
 }
 
 .menu-section h1 {
@@ -248,17 +251,20 @@ img {
 /* 🔹 CARD FACES (FRONT & BACK) */
 .menu-card-front,
 .menu-card-back {
-  padding: 15px;
+  /* padding: 15px; */
   text-align: center;
   backface-visibility: hidden;
-  background-color: orange;
+  /* background-color: orange; */
 }
 
 .menu-card-front img {
   height: 160px;
+  width: auto;
   object-fit: cover;
   margin-bottom: 10px;
   background-color: yellow;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 .menu-card-front h2, .menu-card-back h2 {
@@ -325,8 +331,8 @@ img {
 .menu-cards {
   display: grid !important;
   grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  gap: 14px;
-  padding: 12px;
+  gap: 10px;
+  /* padding: 12px; */
   width: 100%;
   box-sizing: border-box;
 }
@@ -360,6 +366,20 @@ img {
     gap: 20px;
     padding: 30px 15px;
   }
+  .menu-card-front,
+.menu-card-back {
+  padding: 10px;
+  text-align: center;
+  backface-visibility: hidden;
+  /* background-color: orange; */
+}
+
+.categories-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  width: 100% !important;
+}
 }
 
 
