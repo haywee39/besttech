@@ -255,7 +255,7 @@ img {
 
 .menu-card-front img {
   height: 160px;
-  width: auto;
+  width: 100%;
   object-fit: cover;
   margin-bottom: 10px;
   background-color: rgb(250, 234, 234);
