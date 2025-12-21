@@ -161,10 +161,10 @@ img {
 /* 🔹 CATEGORY NAV SECTION (TOP ICON NAV) */
  /*  */
 .menu-categories-nav {
-  padding: 40px 20px;
+  padding: 120px 15px;
   text-align: center;
   color: #3450cd;
-  background-color: #00BFFF;
+  /* background-color: #00BFFF; */
 }
 
 .the-section-title {
@@ -174,20 +174,23 @@ img {
 
 .section-subtitle {
   font-size: 15px;
-  opacity: 0.85;
   margin-bottom: 30px;
 }
 
 .categories-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
   width: 100% !important;
+  /* background-color: red; */
 }
 
 .category-item {
-  background: #fff;
-  border-radius: 10px;
+   width: auto !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  box-sizing: border-box;
+  height: auto;
   padding: 15px;
   cursor: pointer;
   transition: transform 0.2s ease;
@@ -211,7 +214,7 @@ img {
 
 /* 🔹 MENU SECTION (EACH CATEGORY) */
 .menu-section {
-  padding: 50px 6px;
+  padding: 100px 6px;
   color: #3450cd;
   /* background-color: red; */
 }
@@ -226,23 +229,23 @@ img {
   margin-bottom: 25px;
 }
 
-.menu-cards {
+.menu-cards{
   display: grid !important;
   grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   gap: 10px;
-  /* padding: 12px; */
   width: 100%;
   box-sizing: border-box;
+  height: auto;
 }
 
-/* FORCE cards to obey grid */
 .menu-card {
   
   width: auto !important;
   max-width: none !important;
   min-width: 0 !important;
   box-sizing: border-box;
-  /* background: #00BFFF; */
+  height: auto;
+  padding: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -307,6 +310,34 @@ img {
   width: 100%;
 }
 
+}
+
+/* =========================
+   RESPONSIVE CATEGORY GRID
+   ========================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .categories-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Phones (Redmi, Samsung, etc.) */
+@media (max-width: 600px) {
+  .categories-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .category-icon {
+    width: 110px;
+    height: 110px;
+  }
+
+  .category-name {
+    font-size: 14px;
+  }
 }
 
 
