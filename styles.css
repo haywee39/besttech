@@ -172,7 +172,7 @@
 }
 
 .product-image {
-  height: 200px;
+  height: 320px;
   overflow: hidden;
 }
 
@@ -189,7 +189,7 @@
 
 .product-name {
   padding: 1rem 1rem 0;
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: #3450cd;
   text-align: center;
 }
@@ -223,6 +223,128 @@
     grid-template-columns: 1fr;
   }
 }
+/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+/* styling for the featured product modal  */
+/* Modal Overlay */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Box */
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  max-width: 500px;
+  width: 90%;
+  border-radius: 10px;
+  position: relative;
+  animation: scaleIn 0.3s ease;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.close-modal {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #3450cd;
+}
+
+.modal-content h2 {
+  color: #3450cd;
+  margin-bottom: 1rem;
+}
+
+.modal-content ul {
+  padding-left: 1rem;
+}
+
+.modal-content li {
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+/* (_))))))()()()()()()()()()()()()()()()() */
+.large-modal {
+  max-width: 800px;
+  width: 95%;
+}
+
+.modal-specs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+.modal-specs li {
+  background: #f5f7ff;
+  padding: 0.75rem;
+  border-radius: 6px;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+/* Action Buttons */
+.primary-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.action-btn {
+  padding: 0.9rem;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+}
+
+.action-btn.whatsapp {
+  background: #3450cd;
+}
+
+.action-btn.call {
+  background: #3450cd;
+}
+
+.action-btn.quote {
+  background: #3450cd;
+}
+
+.action-btn:hover {
+  opacity: 0.9;
+}
+
+
+/* Mobile tweaks */
+@media (max-width: 600px) {
+  .large-modal {
+    padding: 1.5rem;
+  }
+}
+
+
 /* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
 /* GALLERY */
 .gallery {
