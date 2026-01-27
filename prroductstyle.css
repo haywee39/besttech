@@ -255,7 +255,10 @@ img {
   text-align: center;
   backface-visibility: hidden;
 }
-
+.menu-card-back p{
+  text-align: left;
+  font-size: 13px;
+}
 .menu-card-front img {
   height: 160px;
   width: 100%;
