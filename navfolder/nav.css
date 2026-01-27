@@ -98,6 +98,7 @@
   color: white;
   font-size: 15px;
   text-decoration: none;
+  line-height: .7rem;
   transition: color 0.3s ease;
 }
 
