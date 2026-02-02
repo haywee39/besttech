@@ -214,7 +214,7 @@ img {
 
 /* 🔹 MENU SECTION (EACH CATEGORY) */
 .menu-section {
-  padding: 100px 6px;
+  padding: 80px 6px;
   color: #3450cd;
   /* background-color: red; */
 }
@@ -245,7 +245,7 @@ img {
   min-width: 0 !important;
   box-sizing: border-box;
   height: auto;
-  padding: 15px;
+  padding: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -299,7 +299,7 @@ img {
   .menu-cards {
     grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
     gap: 20px;
-    padding: 30px 15px;
+    padding: 25px 15px;
   }
   .menu-card-front,
   .menu-card-back {
@@ -309,6 +309,7 @@ img {
 }
 
 .menu-card-front img {
+  padding: 5px;
   height: 220px;
   width: 100%;
 }
