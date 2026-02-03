@@ -82,7 +82,7 @@
 
 .intro-content {
     display: flex;
-    gap: 2rem;
+    gap: 10rem;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
@@ -223,143 +223,8 @@
     grid-template-columns: 1fr;
   }
 }
-/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
-/* styling for the featured product modal  */
-/* Modal Overlay */
-.modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 1000;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Modal Box */
-.modal-content {
-  background: #fff;
-  padding: 2rem;
-  max-width: 500px;
-  width: 90%;
-  border-radius: 10px;
-  position: relative;
-  animation: scaleIn 0.3s ease;
-}
-
-@keyframes scaleIn {
-  from {
-    transform: scale(0.9);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-.close-modal {
-  position: absolute;
-  right: 15px;
-  top: 10px;
-  font-size: 3.5rem;
-  font-weight: bolder;
-  cursor: pointer;
-  color: #3450cd;
-}
-
-.modal-content h2 {
-  color: #3450cd;
-  margin-bottom: 1rem;
-}
-
-.modal-content ul {
-  padding-left: 1rem;
-}
-
-.modal-content li {
-  margin-bottom: 0.5rem;
-  color: #3450cd;
-}
-/* (_))))))()()()()()()()()()()()()()()()() */
-.large-modal {
-  max-width: 800px;
-  width: 95%;
-  background-color: #c5dae1;
-}
-
-.modal-specs {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 0.5rem;
-  margin: 1rem 0;
-}
-
-.modal-specs li {
-  background: transparent;
-  padding: 0.5rem;
-  border-radius: 6px;
-  color: #3450cd;
-  font-size: 1rem;
-}
-
-/* Action Buttons */
-.primary-actions {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-.action-btn {
-  padding: 0.9rem;
-  text-align: center;
-  border-radius: 6px;
-  font-weight: 600;
-  text-decoration: none;
-  cursor: pointer;
-  border: none;
-  color: #fff;
-}
-
-.action-btn.whatsapp {
-  background: #3450cd;
-}
-
-.action-btn.call {
-  background: #3450cd;
-}
-
-.action-btn.quote {
-  background: #3450cd;
-}
-
-.action-btn:hover {
-  /* opacity: 0.9; */
-  background: #00BFFF;
-}
 
 
-/* Mobile tweaks */
-@media (max-width: 600px) {
-  .large-modal {
-    padding: 1.3rem;
-  }
-}
-
-
-/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
-/* GALLERY */
-.gallery {
-    padding: 40px 5%;
-    color: #3450cd;
-}
-.machine-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    gap: 20px;
-}
-.machine img { width: 100%; border-radius: 8px; }
 
 /* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
 /* SERVICES */
@@ -399,28 +264,25 @@
 
 /* 666666666666666666666666666666666666666666666666666666 */
 /* TIMELINE
+
+/* TIMELINE
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .timeline {
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 50px;
+  padding: 50px 20px;
+  margin: 0 auto;
   width: 100vw;
-  background: linear-gradient(-45deg, #00BFFF, white, #3450cd);
-  background-size: 400% 400%;
-  animation: gradientShift 8s ease infinite;
-  color: #3450cd;
-}
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  max-width: 1000px;
+  color: rgb(19,82,245);
+ 
 }
 
 time{
-  color: #00BFFF; /*numbers*/
+  color: red;
+}
+
+.detail p{
+  font-size: 20px;
+  color: rgb(19,82,245);
 }
 
 .timeline ol {
@@ -435,24 +297,26 @@ time{
   left: 0;
   width: 3px;
   height: 100%;
-  background: #00BFFF; /*vertical line*/
+  background:  rgb(19,82,245);
 }
 
 .timeline ol li .item-inner {
-  padding: 0px 180px;
+  padding: 20px 180px;
+  margin-bottom: 8vh;
 }
 
 .timeline ol li .time-wrapper {
   position: relative;
-  font-size: 3rem; /* the numbers */
+  font-size: 4.5rem; /* the numbers */
   font-weight: bold;
+  line-height: 0.9;
 }
 
 .timeline ol li .time-wrapper::before,
 .timeline ol li .time-wrapper::after {
   content: "";
   position: absolute;
-  background: #00BFFF; /*the  horizontal line*/
+  background:  rgb(19,82,245); /*the  vertical line*/
 }
 
 .timeline ol li .time-wrapper::before {
@@ -468,7 +332,7 @@ time{
   top: calc(50% - 8px);
   left: -60px;
   width: 15px;
-  height: 15px;/*the dot  */
+  height: 15px;
   border-radius: 50%;
   transform: scale(0);
   transform-origin: left center;
@@ -491,11 +355,33 @@ time{
 }
 
 .timeline ol li .detail h3 {
-  font-size: 1.5rem;
+  font-size: 2rem;
+  line-height: 1;
   margin: 15px 0;
-  color: #3450cd;
+  color: blue;
   text-shadow: none;
 }
+    .btn {
+      margin-top: 30px;
+      padding: 15px 24px;
+      background: blue;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 20px;
+      cursor: pointer;
+      font-weight: lighter;  
+      align-items: center;  
+    }
+
+    .btn:hover {
+      background: red;
+      box-shadow: 0 0 20px blue;
+    }
+     .btn a{
+      text-decoration: none;
+      color: white;
+    }
 /* ANIMATION STYLES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -529,12 +415,6 @@ time{
 /* MQ STYLES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 @media (max-width: 700px) {
-  .timeline{
-      margin: 0 auto;
-      max-width: 1000px;
-      padding: 50px 60px;      
-      text-align: center;
-  }
   .timeline ol li .item-inner {
     padding: 20px 40px;
   }
@@ -560,6 +440,7 @@ time{
     transition-delay: 0.7s;
   }
 
+  .timeline ol li.in-view .detail p {
+    transition-delay: 0.9s;
+  }
 }
-
-/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
