@@ -264,13 +264,14 @@ img {
   width: 100%;
   object-fit: cover;
   margin-bottom: 10px;
-  background-color: rgb(250, 234, 234);
-  padding: 10px !important;
+  /* background-color: rgb(250, 234, 234); */
+  background-color: #cde7f0;
+  padding: 5px !important;
   margin: 0 !important;
 }
 
 .menu-card-front h2, .menu-card-back h2 {
-  font-size: 15px;
+  font-size: 14px;
   margin-bottom: 10px;
 }
 
@@ -303,15 +304,16 @@ img {
   }
   .menu-card-front,
   .menu-card-back {
-  padding: 10px;
+  padding: 5px;
   text-align: center;
   backface-visibility: hidden;
 }
 
 .menu-card-front img {
-  padding: 5px;
+  /* padding: 5px; */
   height: 220px;
   width: 100%;
+  object-fit: contain;
 }
 
 }
