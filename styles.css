@@ -277,12 +277,18 @@
 }
 
 time{
-  color: red;
+  color: #00BFFF;
+}
+.detail p b {
+  /* color: red; */
+  font-weight: bold;
 }
 
 .detail p{
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: lighter;
   color: rgb(19,82,245);
+  
 }
 
 .timeline ol {
@@ -355,7 +361,7 @@ time{
 }
 
 .timeline ol li .detail h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 1;
   margin: 15px 0;
   color: blue;
