@@ -161,6 +161,7 @@ img {
 /* 🔹 CATEGORY NAV SECTION (TOP ICON NAV) */
  /*  */
 .menu-categories-nav {
+  margin-top: 5vh;
   padding: 120px 15px;
   text-align: center;
   color: #3450cd;
