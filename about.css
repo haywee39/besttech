@@ -103,43 +103,7 @@
   line-height: 1.6;
 }
 /* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
-/* Team Section */
-.team {
-  padding: 60px 0;
-  background: #f9f9f9;
-  text-align: center;
-}
 
-.team h2 {
-  color: #3450cd;
-  font-size: 2rem;
-  margin-bottom: 40px;
-}
-
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-}
-
-.team-member img {
-  width: 100%;
-  height: 300px;
-  object-fit: contain;
-  border-radius: 8px;
-  margin-bottom: 15px;
-}
-
-.team-member h3 {
-  color: #3450cd;
-  font-size: 1.25rem;
-  margin-bottom: 5px;
-}
-
-.team-member p {
-  color: #3450cd;
-}
-/* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
 /* Values Section */
 .values {
   padding: 60px 2rem;
