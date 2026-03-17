@@ -386,6 +386,10 @@ Mobile/Tablet View
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
+  .nav-container{
+    justify-content: space-between;
+    padding: 0 2rem;
+  }
     .menu-toggle { display: block; }
 
     /* Active Hamburger Animation */
@@ -412,7 +416,8 @@ Mobile/Tablet View
         visibility: visible;
         display: none; /* Toggle with JS on mobile */
         transform: none;
-        background: #0077ff;
+        /* background: #0077ff; */
+        background: #2d3748;
     }
 
     .sub-dropdown-menu{
@@ -421,7 +426,10 @@ Mobile/Tablet View
         visibility: visible;
         display: none; /* Toggle with JS on mobile */
         transform: none;
-        background: #2d3748;
+        /* background: #2d3748; */
+        background: #333;
+        font-size: 15px;
+        font-style: italic;
 
     }
     

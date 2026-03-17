@@ -108,7 +108,7 @@ ul {
 }
 .get_say_info_sec i {
   color: #fff;
-  font-size: 32px;
+  font-size: 20px;
 }
 .get_say_info_sec > li {
   display: grid;
@@ -121,7 +121,7 @@ ul {
   display: block;
   padding: 15px 25px;
   color: #fff;
-  font-size: 16px;
+  font-size: 14px;
   text-decoration: unset;
   font-weight: 500;
   background: #162b65;
@@ -139,7 +139,7 @@ ul {
 
 /* &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
 /* Maps Section */
-.maps-section {
+/* .maps-section {
   padding: 60px 0;
   background: #f9f9f9;
 }
@@ -157,4 +157,4 @@ ul {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+} */
