@@ -351,7 +351,12 @@ Mobile/Tablet View
 .dropdown-menu a, .sub-dropdown-menu a {
     color: white;
     padding: 6px 20px;
+    
 }
+
+ .sub-dropdown-menu a{
+    font-size: 13px;
+ }
 
 /* Hover Logic */
 .dropdown:hover > .dropdown-menu,
