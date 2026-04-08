@@ -1,1 +1,4 @@
+User-agent: *
+Allow: /
+
 Sitemap: https://haywee39.github.io/besttech/sitemap.xml
